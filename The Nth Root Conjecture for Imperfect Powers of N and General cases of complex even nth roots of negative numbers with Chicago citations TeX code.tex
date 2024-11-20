@@ -1,0 +1,432 @@
+\documentclass[a4paper,oneside,10pt]{article}
+\usepackage{multicol}
+\usepackage{natbib}
+%[backend=biber,style=chicago-notes]
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{dsfont} 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm} 
+\newtheorem*{conjecture*}{Conjecture}
+\newtheorem*{theorem*}{Theorem} 
+\newtheorem{case}{Case} 
+\newtheorem{case*}{Case} 
+\newtheorem*{subcase*}{Subcase}
+\usepackage{graphicx} 
+\usepackage{float} 
+\usepackage{subcaption}
+%\usepackage{natbib} 
+\usepackage{cleveref}
+
+\title{The Nth Root Conjecture for Imperfect Powers of N and their irrationality and General cases of complex even nth roots of negative numbers with respect to De Moivre's Theorem}
+
+
+\author{
+ Siyabulela Tyaliti \\
+  School of Health, Science, and Technology \\
+  Bachelor of Science in Mathematics \\ 
+  Cornerstone University \\
+  Grand Rapids, MI 49525 \\
+  \texttt{School email: \href{mailto:siyabulela.tyaliti@cornerstone.edu} {siyabulela.tyaliti@cornerstone.edu}} \\ 
+  \texttt{Personal email: \href{mailto:siyabulelatyaliti@gmail.com}{siyabulelatyaliti@gmail.com}} \\ 
+  %% \AND
+  %% Coauthor \\
+  %% Affiliation \\
+  %% Address \\
+  %% \texttt{email} \\
+  %% \And
+  %% Coauthor \\
+  %% Affiliation \\
+  %% Address \\
+  %% \texttt{email} \\
+  %% \And
+  %% Coauthor \\
+  %% Affiliation \\
+  %% Address \\
+  %% \texttt{email} \\
+}
+
+\begin{document}
+\maketitle
+\newpage
+\begin{abstract} 
+This paper will be divided into two parts, the first part will deal with the idea of The Nth Root Conjecture for Imperfect Powers of N and their irrationality. Nth roots of a number are numbers that express a value that we multiply by itself repeatedly some arbitrary n number of times till we obtain some particular number. In this paper we examine a conjecture regarding nth roots of a number when the number happens to be an imperfect power of n. In this paper we showed through various cases that, when the number we are multiplying by itself is some real number that is an imperfect power of n, we seem to always obtain an irrational number. We also explore a counterexample where this idea fails to hold true.
+The second part of the paper will deal with the idea of General cases of complex even nth roots of negative numbers with respect to De Moivre's Theorem. When we explore the solution to an equation like \(x^2+1=0\), we see that the solutions do not exist in the set of real numbers. The solution to the equation \(x^2 + 1 = 0\) is going to be \(x = \sqrt{-1}\) which can be written as \(x = i\), where \(i\) is the double root of the function \(f(x) = x^2 + 1\) where \(x \in \mathds{R}\). In this paper, I explore the consequence of what happens when we generalize the idea of roots of a generic function in the form \(c(x) = x^n + y\) where \(x \in \mathds{R}, y > 0, y \in \mathds{R}\), and \(n\) is an even natural number. 
+\end{abstract}
+
+
+% keywords can be removed
+%\keywords{First keyword \and Second keyword \and More}
+
+\section*{Part 1: The Nth Root Conjecture for Imperfect Powers of N and their irrationality} 
+
+\section{Introduction}
+The purpose of the research I did in this paper while working on this paper was to explore a question that I wanted to answer out of curiosity. Over the course of my research, I found out that the result that I was researching is not unique and other people have proven it before. However, the research and conversations I had with my professor over the course of my research allowed me to get hands on practice around what it looks like to pursue mathematical research, as I got to prove this result in my own way and got to explore other implications of the ideas behind the result.  
+
+\section{The background of the conjecture: a tale of my excitement}  
+\label{sec:headings}
+The conjecture that I explored throughout this paper is an idea that was inspired by something I thought of this past summer (the summer of 2024) while I was trying to entertain myself during a time of boredom. The conjecture is based on a generalization I made after noticing a pattern while I was playing with some numbers in my head. Now I will explore this idea further in this paper as part of my research for my capstone class in my undergraduate coursework.  \\ 
+On August 20th 2024, I was waiting for a bus at the bus stop. I eventually got bored as I was waiting, as a result of my boredom, I started playing with some numbers inside my head. While I was having fun playing with the numbers, I started to notice a pattern, this led me to make a generalization about the pattern I observed in the numbers I was playing with. I began by playing with square roots of non perfect squares, and I remembered that in my undergraduate coursework in Mathematical Proofs, one of the results we had proven is that $\sqrt{2}$ is irrational (I will refer to this proof later in this paper, as it was monumental in helping me move forward with the proof of the conjecture). Then I started wondering whether what happens when we compute the cube root of a non perfect cube, or the fourth root of a non perfect power of 4. As I continued wondering, I then became curious and excited to explore the idea of what would happen in general when you compute the nth root of some number that is a non perfect power of n. Thus, I arrived at the conjecture that I explored in this paper.  
+
+\section{The Irrationality of \(\sqrt{2}\)} 
+
+The following proof is a proof that I referenced in the process of looking for a way to prove the conjecture that I explored in this paper. This is a proof that I first learned about in my class in Mathematical Proofs while I was working on my undergraduate coursework in Mathematics during my sophomore year of college at Cornerstone University. This proof was proving a result by using the method of contradiction. The proof I referenced to help me prove the conjecture is a proof that was written in the textbook that we used in my Mathematical Proofs class (I referenced the textbook \href{https://www.amazon.com/Mathematical-Proofs-Transition-Advanced-Mathematics/dp/0134746759}{Mathematical Proofs: A Transition to Advanced Mathematics by Ping Zhang} that we used in my Mathematical Proofs class). The proof is written below as follows...  
+
+\paragraph{The even perfect square lemma}
+
+This lemma is actually referenced as a theorem in the textbook that was used in my Mathematical Proofs class, in the book this lemma is referenced as Theorem 3.12. This lemma will be used in the proof for \hyperlink{Ping Zhang's proof}{the irrationality of \(\sqrt{2}\) result later in this paper}. The proof for the lemma is written below as follows... 
+
+\begin{theorem*}[Theorem 3.12]\cite[p.$\Tilde{91}$]{Zhang2018}\hypertarget{Theorem 3.12}{}
+    Let \(x \in \mathds{Z}\). Then \(x^2\) is even if and only if \(x\) is even. 
+\end{theorem*} 
+
+\begin{proof}
+    Assume that \(x\) is even. Then \(x = 2a\) for some integer \(a\). Therefore, $$x^2 = (2a)^2 = 4a^2 = 2(2a^2)$$  Because \(2a^2 \in \mathds{Z}\), the integer \(x^2\) is even. \\  
+     For the converse, assume that \(x\) is odd. So, \(x = 2b + 1\) where \(b \in \mathds{Z}\). Then \[x^2 = (2b +1)^2 = 4b^2 + 4b +1 = 2(2b^2 + 2b) + 1\] Since \(2b^2 + 2b\) is an integer, \(x^2\) is odd.  
+\end{proof}
+
+
+\begin{theorem*}\hypertarget{Ping Zhang's proof}{}\cite[p.$\Tilde{136}$]{Zhang2018}
+    The real number \(\sqrt{2}\) is irrational. 
+\end{theorem*} 
+
+\begin{proof}
+    Assume, to the contrary, that \(\sqrt{2}\) is rational. Then \(\sqrt{2} = a/b\), where \(a,b \in \mathds{Z}\) and \(b \neq 0\). We may further assume that \(a/b\) has been expressed in (or reduced to) lowest terms. Then \(2 = a^2/b^2\), so \(a^2 = 2b^2\). Since \(b^2\) is an integer, \(a^2\) is even. By \hyperlink{Theorem 3.12}{Theorem 3.12}, \(a\) is even. So, \(a = 2c\), where \(c \in \mathds{Z}\). Thus, \((2c)^2 = 2b^2\) and \(4c^2 = 2b^2\). Therefore, \(b^2 = 2c^2\). Because \(c^2\) is an integer, \(b^2\) is even, which implies by that \(b\) is even. Since \(a\) and \(b\) are even, each has \(2\) as a divisor, which is a contradiction since \(a/b\) has been reduced to lowest terms.  
+\end{proof}
+
+\section{The conjecture explored in this paper} 
+In this section of the paper, I will deal with the conjecture that is actually explored in this paper.  
+\subsection{The statement of the conjecture}   
+The conjecture put into words basically states that whenever you compute the nth root of a real number that is not a perfect power of n, you will always obtain an irrational number. 
+
+\subsubsection{The statement of the conjecture in formal mathematical logic} 
+\(n \in \mathds{N}, n > 0, \text{\hspace{0.1cm} and \hspace{0.1cm}} a \in \mathds{R}^{+} \text{\hspace{0.1cm} such \hspace{0.1cm} that \hspace{0.1cm}} b^{n} \neq a, \forall b \in \mathds{Q} \implies \sqrt[n]{a} \in \mathds{R}^{*}/\mathds{Q}\).  
+
+\begin{conjecture*}
+  If \(n \in \mathds{N}, n > 1\) and \(a \in \mathds{R}^{+}\) such that \(a \neq  b^n\) for all \(b \in \mathds{Q}\), then \(\sqrt[n]{a} \in \mathds{R}^{*}/\mathds{Q}\). 
+\end{conjecture*} 
+
+\begin{proof}
+    We proceed by cases 
+    
+    \begin{case}
+        When \(n \in \mathds{N}\), \(n \geq 2\), and \(a > 0\).
+    \end{case}
+    
+    Assume to the contrary. Let \(\sqrt[n]{a} \in \mathds{Q}\), it follows that \(\sqrt[n]{a}\) can be written in the form \(\frac{L}{P}\) where \(L\) and \(P\) are integers and \(P \neq 0\). We see that 
+    \begin{align*}
+        \sqrt[n]{a} &= \frac{L}{P} \\ 
+                    &= \left(\frac{L}{P}\right)^n 
+    \end{align*} 
+    
+    But this violates the condition that \(a \notin b^n\) for some real number $b$. Since \(\frac{L}{P} \in \mathds{Q}\), this then gives us a contradiction. 
+
+   %\begin{case}
+   %    When \(n \in \mathds{N}\), \(n = 2\), and \(a < 0\). 
+   %\end{case} 
+
+%Let \(n \in \mathds{N}\), where \(n = 2\), and \(a < 0\). It follows that \(\sqrt[2]{a} \notin \mathds{R}\), since \(\sqrt{-1} = i\), and the square root of a negative number is always a complex number. Since \(\mathds{R/Q} \subset \mathds{R}\) and \(\sqrt[2]{a} \notin \mathds{R}\), it follows that \(\sqrt[2]{a} \notin \mathds{R/Q}\). Therefore, the conjecture is not true under every real number, as demonstrated by this counterexample. 
+
+\end{proof}
+
+\section{The Uniqueness of the Conjecture and Comparisons of Methodologies: How other people have proved various cases of this conjecture}      
+
+In this section of the paper I will talk about the uniqueness of the conjecture, as well as explore how other people have thought about the conjecture, and how they proved it. I will also give some comparisons around how other people have thought about the conjecture versus how I thought about it. 
+
+\paragraph{uniqueness of the conjecture}
+
+This conjecture is not unique because other people have already proven it and played with the idea. I will show other proofs that other people have come up with below.  
+
+\subsection{\href{https://mathsociitd.github.io/blog/2021/03/14/irrationality-of-nth-roots/}{Proof written by Ariprah Kar and Shammi Malhotra}}\cite{iit2021}   
+
+Prove that \(\sqrt[n]{2}\) is irrational for all \(n \geq 2\) where \(n \in \mathds{N}\). 
+
+To answer the proposed question, let us first consider the case where \(n = 2\). We can then show that \(\sqrt{2}\) is irrational either by contradiction or by unique factorization. For the sake of convenience, let us evaluate our statement taking ‘\(2\)’ as our integer, which can then be generalized to any other positive number.
+
+\subsubsection{Proof by Contradiction} 
+
+\begin{proof}
+    Their proof of the result by contradiction is a similar argument to the argument written by Dr. Ping Zhang in her textbook on Mathematical Proofs \hyperlink{Ping Zhang's proof}{(refer to the Theorem above on the \(\sqrt{2}\) being an irrational number)}. However, they wrote their proof as follows:
+\\
+    Assume that \(\sqrt{2}\) is a rational number. So, it can be expressed in the form \(p/q\) where \(p \text{\hspace{.1cm} and \hspace{.1cm}} q\) are coprime integers and \(q \neq 0\). 
+    So, \(\sqrt{2} = p/q\) \\
+    Solving, we get, \[\sqrt{2} = p/q\] On squaring both sides we get, 
+    \begin{equation*}
+        2 = (p/q)^2 
+    \end{equation*} 
+    \begin{equation}
+        \implies 2q^2 = p^2  \label{eq:1}
+    \end{equation}
+    \begin{equation*}
+       p^2/2 = q^2  
+    \end{equation*}
+    \text{So, \(2\) divides both \(p\) and \(p\) is a multiple of \(2\)}
+    \begin{equation*}
+        \implies p = 2m 
+    \end{equation*}
+    \begin{equation}
+       \implies p^2 = 4m^2 \label{eq:2}  
+    \end{equation}
+    \text{From equations (\ref{eq:1}) and (\ref{eq:2}), we get,} 
+    \begin{align*}
+        \implies 2q^2 &= 4m^2 \\ 
+        \implies q^2 &= 2m^2
+    \end{align*}
+    \[\implies \text{\(q^2\) is a multiple of \(2\)}\]
+    \[\implies \text{\(q\) is a multiple of \(2\)}\] \\ 
+    \text{Hence \(p,q\) have a common factor of \(2\).} \\ \text{This contradicts our assumption that they are co-primes.} \\ \text{Therefore \(p/q\) is not a rational number, thus \(\sqrt{2}\) is an irrational number.} 
+\end{proof} 
+
+\subsubsection{Proof by unique factorization}  
+
+\begin{proof}
+    As with the proof by \href{https://en.wikipedia.org/wiki/Proof_by_infinite_descent}{infinite descent}, we obtain \(a^2 = 2b^2\). Being the same quantity, each side has the same prime factorization by the \href{https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic}{fundamental theorem of arithmetic}, and in particular would have to have the factor \(2\) occur the same number of times. However, the factor \(2\) appears an odd number of times on the right, but an even number of times on the left-a contradiction. 
+\end{proof}
+ 
+\paragraph{How I thought about it in comparison to other people}
+I have noticed throughout my research that in other texts that I have looked at so far, other people have mostly solved this problem under the domain restriction of the \(n\)th root function where \(a\) is a strictly positive integer. In most texts, people have started out by proving the irrationality of \(\sqrt{2}\) (beginning their proofs with the case where \(n = 2\) and eventually generalized that argument to other natural number greater than \(2\). The way I approached the problem is that I also used a proof by contradiction, however, my proof starts with the case where \(\sqrt[n]{a}\) is a rational number and then derives a contradiction from that case. 
+
+
+%The way I approached the problem was to look at various cases for the  \(\sqrt[n]{a}\) where \(n \in \mathds{R}\) such that \(a > 0, a < 0, a = 0\), and where \(n \in \mathds{N}\) such that \(n\) is an even natural number and where \(n\) is an odd natural number.  
+
+%\section{Areas or ideas for further research}\hypertarget{Areas or ideas for further research}{}  
+
+%A question I am interested in further exploring regarding this conjecture is whether is there a way to prove in general if the nth roots of any negative number when \(n \in \mathds{N}\), where \(n\) is an even natural natural, and \(n > 2\) will always result in a solution that does not exist in the set of real number. This is the idea that I will be exploring further in the second part of my paper.  
+
+\section*{Part 2: General cases of complex even nth roots of negative numbers with respect to De Moivre's Theorem}  
+
+\section{Introduction}
+This is a paper I am writing to communicate my findings from my capstone research to answer my second research question. In this paper I will show that general roots of a generic function in the form \(c(x) = x^n + y\) where \(x \in \mathds{R}, y \in \mathds{N}\), and \(n\) is an even natural number will always be a complex number, and I will establish this through finding the solution to the equation \(x^n + y = 0\). 
+
+
+\section{Background of the problem}
+\label{sec:headings2} 
+ As I have thought about the implication of the result that I have proven in the first part of the paper. I had conversations with my capstone professor about further research questions that arose due to the implications of my research for my first paper, Dr. Timothy Reynhout encouraged me to further explore the implications of the ideas to the conjecture I explored in the first part of the paper. When we remove the restrictions placed on the value of \(a\) and we consider the case where \(n \in \mathds{N}\), \(n = 2\), and \(a < 0\), we see that we will always obtain a non-real complex number.  
+
+%The problem I explored in this part of the paper came as a result derived from generalizing the \hyperlink{counterexample from paper 1}{the counterexample to the conjecture  that I explored in the first part of this paper for my capstone research project}. \hyperlink{Areas or ideas for further research}{I wrote a section earlier in this paper about further areas of research}, where I wrote about further questions that arose in my mind as I saw the implications that came from the ideas that I explored in that paper. 
+
+%I will revisit the counterexample for the conjecture that I explored in the previous paper as a means for me to give the reader some context about what led me to think about the idea that I am exploring in this paper. 
+
+\subsection{An implication of the result in part 1}\hypertarget{counterexample from paper 1}{} 
+
+\begin{conjecture*}
+  If \(n \in \mathds{N}, n = 2\) and \(a \in \mathds{R}^{-}\) such that \(a \neq  b^n\) for all \(b \in \mathds{Q}\), then \(\sqrt[n]{a} \in \mathds{R}^{*}/\mathds{Q}\).  
+\end{conjecture*}  
+
+\begin{proof}
+    \begin{case*}
+       When \(n \in \mathds{N}\), \(n = 2\), and \(a < 0\). 
+   \end{case*} 
+
+Let \(n \in \mathds{N}\), where \(n = 2\), and \(a < 0\). It follows that \(\sqrt[2]{a} \notin \mathds{R}\), since \(\sqrt{-1} = i\), and the square root of a negative number is always a complex number. Since \(\mathds{R/Q} \subset \mathds{R}\) and \(\sqrt[2]{a} \notin \mathds{R}\), it follows that \(\sqrt[2]{a} \notin \mathds{R/Q}\). Therefore, the conjecture is not true under every real number, as demonstrated by this counterexample.
+
+\end{proof} 
+
+\paragraph{The background of the problem: continuing the conversation} 
+
+What led me to eventually ask the question that I explored in this paper as I was thinking about \hyperlink{counterexample from paper 1}{the counterexample to the conjecture  that I explored in the first part of this paper for my capstone research project} is that as I was thinking about the counterexample, I became curious to see whether in cases where \(x \in \mathds{R}, a \in \mathds{R}, a < 0\) and \(n\) is an even natural number, would there be no real number solution to the equation \(x^n - a = 0\). In other words, when we compute \(\sqrt[n]{a}\) where \(a \in \mathds{R}, a < 0\), and \(n\) is an even natural number, will we always obtain a non real complex number? As I have thought about this idea and read other texts around it, I realized that it seems to make sense, intuitively at least, so I want to prove that it is true in general and that is what I have set out to accomplish in this paper. I got the idea behind how this idea makes intuitive sense from reading \href{https://math.libretexts.org/Bookshelves/Algebra/Advanced_Algebra/05%3A_Radical_Functions_and_Equations/5.01%3A_Roots_and_Radicals}{this article from LibreTexts Mathematics on Roots and Radicals}. 
+
+\section{Building context for the proofs in this paper: A conversation about complex numbers}
+Before we can go into the proofs that I will write in this paper, we should first understand the definition of a complex number and the nature of how complex numbers work, and to accomplish that we will turn to one of the texts that I referenced as I was doing research for this paper. The textbook that I am currently using in my Abstract Algebra class as part of my undergraduate coursework for my bachelor's degree in mathematics.  
+
+\subsection{A text from a textbook I referenced: \href{https://www.amazon.com/First-Course-Abstract-Algebra-7th/dp/0201763907/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr=}{A First Course in Abstract Algebra by John B. Fraleigh}}  
+
+\subsubsection{Complex Numbers: Definition}\cite[p.$\Tilde{12}$]{Fraleigh2003} 
+
+A real number can be visualized geometrically as a point on a line that we often regard as the \(x\)-axis. A complex number can be regarded as a point in the Euclidean plane, as shown in Figure \ref{fig:complex-num-point}. Note that we label the vertical axis as the \(yi\)-axis rather than just the \(y\)-axis, and label the point one unit above the origin with \(i\) rather than 1. The point with Cartesian coordinates \((a,b)\) is labeled as \(a + bi\) in Figure \ref{fig:complex-num-point}. The set $\mathds{C}$ of \textbf{complex numbers} is defined by \[\mathds{C} = a + bi | a,b \in \mathds{R}\] We consider $\mathds{R}$ to be a subset of the complex numbers \(r + 0i\). For example, we write \(3 + 0i\) as \(3\) and \(-\pi + 0i\) as \(-\pi\) and \(0 + 0i\) as \(0\). Similarly, we write \(0 + 1i\) as \(i\) and \(0 + si\) as \(si\).  \\ Complex numbers were developed after the development of real numbers. The complex number \(i\) was invented to provide a solution to the quadratic equation \(x^2 = -1\), so we require that \[i^2 = -1\] And \(i\) is called the imaginary number (which is used as a basis for the imaginary component of any complex number written in the for \(a + bi\)).   
+
+\begin{figure}[H] 
+    \centering
+    \includegraphics[width=0.5\linewidth]{2017228-175246622-1883-1-argand-plane-and-polar-representation[1].png} 
+    \caption{Geometric representation of a complex number as a coordinate}
+    \label{fig:complex-num-point} 
+\end{figure}
+
+
+
+\subsection{Multiplication of Complex Numbers}  
+
+\subsubsection{Establishing the Algebraic meaning of Complex Number Multiplication}\cite[p.$\Tilde{12-13}$]{Fraleigh2003}
+
+The product $(a+bi)(c+di)$ is defined in the way it must be if we are to enjoy the familiar properties of real arithmetic and require that \(i^2 = -1\). \\ 
+Namely, we see that we want to have 
+\begin{align*}
+    (a+bi)(c+di) &= ac + adi + bci + bdi^2 \\
+                 &= ac + adi + bci + bd(-1) \\
+                 &= ac + adi + bci - bd \\
+                 &= (ac - bd) + (ad + bc)i
+\end{align*}
+Consequently, we define complex number multiplication as the multiplication of $z_1 = a + bi$ and $z_2 = c + di$ where 
+\[z_1z_2 = (a+bi)(c+di) = (ac - bd) + (ad + bc)i\]
+which is of the form $r + si$ where $r = ac - bd$ and $s = ad + bc$. 
+\subsubsection{Establishing the Geometric Meaning of Complex Number Multiplication}\cite[p.$\Tilde{13-14}$]{Fraleigh2003} 
+To establish the geometric meaning of complex number multiplication, we first define the \textbf{absolute value} $|a + bi|$ of \(a + bi\) by \[|a + bi| = \sqrt{a^2 + b^2}\] This absolute value is a non-negative real number and is the distance from \(a + bi\) to the origin (as we see in Figure \ref{fig:complex-num-point}). We can now describe a complex number \(z\) in the polar coordinate form \[z = |z|(cos\theta + isin\theta)\] where \(\theta\) is the angle measured counterclockwise from the \(x\)-axis to the vector from \(0\) to \(z\) such that $$A(z) = |z|(cos\theta + isin\theta)$$.  As shown in Figure \ref{fig:ang-rot}. 
+
+\begin{figure}[H]
+      \centering
+    \includegraphics[width=0.5\textwidth]{spa1[1].png} 
+    \caption{The Geometric representation of a complex number with respect to the rotation of the angle $\theta$\cite{byju's2024}}
+    \label{fig:ang-rot}
+\end{figure} 
+
+Euler's formula states the following: $$e^{i\theta} = cos\theta + isin\theta$$  Using Euler's formula, we can express $A(z)$ as $A(z) = |z|e^{i\theta}$. Let us set \[z_1 = |z_1|e^{i\theta_1}  \text{ \hspace{1cm} and \hspace{1cm}} z_2 = |z_2|e^{i\theta_2}\] and compute their product in this form, assuming that the usual laws of exponentiation hold with complex number exponents. We obtain 
+\begin{align*}
+    z_1z_2 &= |z_1|e^{i\theta_1}|z_2|e^{i\theta_2} \\ 
+           &= |z_1||z_2|e^{i(\theta_1 + \theta_2)} \\ 
+           &= |z_1||z_2|[cos(\theta_1 + \theta_2) + isin(\theta_1 + \theta_2)]
+\end{align*} 
+
+The last equation in the calculation above gives us the polar form of the equation \(z = |z|(cos\theta + isin\theta)\) where \(|z_1z_2| = |z_1||z_2|\) and the polar angle $\theta$ for \(z_1z_2\) is the sum $\theta = \theta_1 + \theta_2$. Thus, geometrically, we multiply complex numbers by multiplying their absolute values and adding their polar angles (the polar angle is sometimes also called the argument\cite{highermath2024}), as shown in Figure \ref{fig:comp-prod}. 
+
+
+\begin{figure}[H] 
+    \centering
+    \includegraphics[width=0.5\linewidth]{Geometry-of-Complex-Numbers-07[1].png} 
+    \caption{Geometric representation complex number multiplication\cite{byju's2024prod}}
+    \label{fig:comp-prod}
+\end{figure} 
+
+\section{A Conversation about De Moivre's Theorem} 
+
+Now that we have established the idea of complex numbers, we will now have a conversation around the idea that helps us to find complex roots of polynomials, and that idea is De Moivre's Theorem. I will have this conversation through talking about a proof of the theorem from a paper that I referenced during my research for this paper and I will also talk about the idea of how De Moivre's theorem helps us to find complex roots of equation, this idea was also explored in detail in the paper that I referenced during my research. I referred to a paper written by Cynthia Schneider for her Master's Thesis when she was pursuing her Masters of Science in Teaching Mathematics under the direction of Dr. John S. Caughman at Portland State University in 2011. 
+
+\subsection{A Proof for De Moivre's Theorem}\cite[p.$\Tilde{16-17}$]{schneider2011moivre} 
+
+To prove De Moivre's Theorem. We use a "simple" proof by induction. Given a complex number \[z = (cos\theta + isin\theta)\] we can "easily" show using repeated multiplication that for $n = 0,1,2,3,4,$ 
+
+\begin{align*}
+    z^0 &= \left[r^0(cos0\theta + isin0\theta)\right] = 1(cos0 + isin0) = 1 + 0i = 1 \\ 
+    z^1 &= \left[r(cos\theta + isin\theta)\right]^1 = r(cos\theta + isin\theta) \\ 
+    z^2 &= \left[r(cos\theta + isin\theta)\right]^2 = \left[r(cos\theta + isin\theta][r(cos\theta + isin\theta)\right] = r^2(cos2\theta + isin2\theta) \\ 
+    z^3 &= \left[r(cos\theta + isin\theta)\right]^3 = \left[r^2(cos2\theta + isin2\theta)][r(cos\theta + isin\theta)\right] = r^3(cos3\theta + isin3\theta) \\ 
+    z^4 &= \left[r(cos\theta + isin\theta)\right]^4 = \left[r^3(cos3\theta + isin3\theta)][r(cos\theta + isin\theta)\right] = r^4(cos4\theta + isin4\theta) 
+\end{align*}  
+
+Now let us assume that $z^n = \left[r(cos\theta + isin\theta)\right]^n = r^n(cosn\theta + isinn\theta)$ is true for some \(n \in \mathds{Z}^+\). \\ 
+Then we must show that this implies it is true for all \(n + 1\), that is. \[\left[r(cos\theta + isin\theta)\right]^{n + 1} = r^{n + 1}(cos(n + 1)\theta + isin(n + 1)\theta)\]  
+
+Then given \[\left[r(cos\theta + isin\theta)\right]^n = r^n(cosn\theta + isinn\theta)\] 
+
+we multiply both sides of the equation by \(\left[r(cos\theta + isin\theta)\right]\) Then \[\left[r(cos\theta + isin\theta)\right]\left[r(cos\theta + isin\theta)\right]^n = \left[r^n(cosn\theta + isinn\theta)][r(cos\theta + isin\theta)\right]\] Therefore 
+\[\left[r(cos\theta + isin\theta)\right]^{n + 1} = r^nr\left[cos{n\theta}cos{\theta} + cos{n\theta}isin\theta + isin{n\theta}cos\theta - sin{n\theta}sin\theta\right]\] 
+We employ the use of common trigonometric formulas for the sum of an angle for sin and cosine, 
+
+$$sin(x + y) = sinxcosy + cosxsiny \text{ \hspace{1cm} and \hspace{1cm}} cos(x + y) = cosxcosy - sinxsiny$$ We let \(x = n\theta \text{\hspace{.1cm} and \hspace{.1cm}} y = \theta\) and we have \[\left[r(cos\theta + isin\theta)\right]^{n + 1} = r^{n + 1}(cos(n\theta + \theta) + isin(n\theta + \theta) = r^{n + 1}(cos(n + 1)\theta + isin(n + 1)\theta)\] as desired for all positive integers. \\
+\vspace{.1cm}
+
+We must also consider \(n \in \mathds{Z}^-\) for \[z^{-n} = \left[r(cos\theta + isin\theta)\right]^{-n} = r^{-n}(cos{(-n\theta)} + isin{(-n\theta)}\]
+Since cosine and sine are even and odd functions respectively, we have 
+
+\begin{align*}
+    cos{(-n\theta)} + isin{(-n\theta)} &= cos{(n\theta)} - isin{(n\theta)}  \\ 
+                                       &= \frac{cos{(n\theta)} - isin{(n\theta)}} {cos^2{(n\theta)} + sin^2{(n\theta)}} \\
+                                       &= \frac{1}{cos{(n\theta)} + isin{(n\theta)}} \cdot \frac{1}{cos{(n\theta)} - isin{(n\theta)}} \cdot cos{(n\theta)} - isin{(n\theta)} \\
+                                       &= \frac{1}{cos{(n\theta)} + isin{(n\theta)}} \\ 
+\end{align*}
+
+% in line 189, since cosine is an even function, its sign does not change and it remains positive.  
+Therefore \[cos{(-n\theta)} + isin{(-n\theta)} = \frac{1}{r^n}\left[\frac{1}{cos{(n\theta)} + isin{(n\theta)}}\right]\] 
+
+\subsection{Extracting roots with De Moivre's Theorem}\cite[p.$\Tilde{18}$]{schneider2011moivre}  
+
+Potentially the greatest value of De Moivre's work lies in the ability to find the n distinct roots of complex numbers. If we let $z = p(cos\theta + isin\theta)$ and $z^n = w$, then for $w = r(cos\phi + isin\phi)$ where $z^n = \left[p(cos\theta + isin\theta)\right]^n$ we have $p^n(cos{(n\theta)} + isin{(n\theta)}) = r(cos\phi + isin\phi)$. So that implies $p^n = r$ and $n\theta = \phi$, or $p = \sqrt[n]{r}$ and $\theta = \frac{\phi}{n}$. 
+\vspace{.1cm}
+
+Since both cosine and sine have a period of \(2\pi\), we have solutions to both sides of the equation \(n\theta = \phi\), that is \(n\theta = \phi + {2\pi}k\) or \(\theta = \frac{\phi + {2\pi}k}{n}\) with $k = 0,1,2,3,...,n-1$. 
+\vspace{.1cm}
+
+If we let $k = n$ then we repeat the solutions since \(\theta = \frac{\phi}{n}\) and \(\frac{\phi + {2\pi}k}{n} = \frac{\phi}{n} + 2\pi\) are co-terminal angles. Therefore for the positive integer \(n\), we find \(n\) distinct \(n\)th roots of the complex number \(r(cos\phi + isin\phi)\) by $z = \sqrt[n]{r}\left(cos\frac{\phi + {2\pi}k}{n} + isin\frac{\phi + {2\pi}k}{n}\right)$. 
+\vspace{.1cm}
+
+On the complex plane, these solutions or \(n\)th roots lie on a circle with radius \(\sqrt[n]{r}\)\footnote{I wrote this formula with the error in Cynthia Schneider's paper rectified}, with \(n\) solutions evenly spaced at \(\frac{2\pi}{n}\) intervals.  
+
+\section{The conjecture I explored in this paper} 
+
+Now that we have dealt with the ideas that give us the context behind the conjecture I will be exploring in this paper, we will look at the conjecture that I have decided to explore in this paper, and prove it. 
+\vspace{.1cm} 
+
+\subsection{Prelude to the conjecture: complex roots of numbers with respect to De Moivre's theorem expressed in terms of Euler's Identity}\hypertarget{Prelude}{} 
+
+We now have the context of De Moivre's theorem and we know that it states the following: 
+\vspace{.1cm}
+
+We can obtain \(n\) distinct complex roots for any number by the general formula $$z_{k+1} = \sqrt[n]{r}\left(cos\left(\frac{\theta + {2\pi}k}{n}\right) + isin\left(\frac{\theta + {2\pi}k}{n}\right)\right)$$  where \(k \in \mathds{Z}_n\), and \(\mathds{Z}_n = {0,1,2,...,n-1}\) for some \(n \in \mathds{Z}\) 
+
+Euler's identity states the following: \[z = |z|e^{\theta{i}}\] Therefore, when we express the complex root \(z_{\mathds{C}}\) of any number in general in the form of Eulers identity, through expressing De Moivre's theorem in terms of Euler's identity, we obtain the following  \[z_{\mathds{C}} = |z|e^{{\left(\frac{\theta + {2\pi}k}{n}\right)}{i}}\] When \(n\) is even. That means \(n = 2m\) where \(m \in \mathds{Z}\). Thus, when \(n\) is an even integer, we see that \[z_{\mathds{C}} = |z|e^{{\left(\frac{\theta + {2\pi}k}{2m}\right)}{i}}\] hence \[z_{\mathds{C}} = {\sqrt[n]{r}}e^{{\left(\frac{\theta + {2\pi}k}{2m}\right)}{i}}\] 
+
+\subsection{Conjecture in words, and a proof for it}
+
+\subsubsection{Conjecture in words} 
+
+Whenever \(n\) is an even integer and \(a\) is a negative real number. There exists a solution to the equation \(x^n + a = 0\) such that \(x = \sqrt[n]{a}\) is a non-real complex number. 
+
+\subsubsection{Proof of the conjecture}
+
+\begin{conjecture*}
+    Whenever \(n\) is an even integer and \(a < 0\) where \(a \in \mathds{R}\). There exists a solution to the equation \(x^n + a = 0\) such that \(x = \sqrt[n]{a}\) and \(x \in \mathds{C}/\mathds{R}\). 
+\end{conjecture*}
+
+Using what we now know from the section above, \hyperlink{Prelude}{Prelude to the conjecture: complex roots of numbers with respect to De Moivre's theorem expressed in terms of Euler's Identity} and everything else we have established in the rest of the paper, we can show that when \(\theta = \pi\), \(z_{\mathds{C}} \notin \mathds{R}\). I will write the proof that shows this, next 
+
+\begin{proof}
+    Assume to the contrary that \(z_{\mathds{C}} \in \mathds{R}\). It follows that \(z_{\mathds{C}}\) can be written in the form \(z = a + bi\) where \(b = 0\). We see that \(z = a + 0i\) where \(a \in \mathds{R}\). In the context of complex number roots \(z_{\mathds{C}} = {\sqrt[n]{r}}{\left(cos{\frac{\theta + {2\pi}k}{2m} + isin{\frac{\theta + {2\pi}k}{2m}}}\right)}\) where \(sin{\frac{\theta + {2\pi}k}{2m}} = 0\). Consider when \(\theta = \pi\). We see that \(sin{\frac{\theta + {2\pi}k}{2m}} = sin{\frac{\pi + {2\pi}k}{2m}}\). We shall further proceed by cases for different integer values of \(k\). 
+    
+    \begin{case}
+        When \(k\) is an even integer.
+    \end{case}
+
+    Suppose that \(k\) is an even integer. It follows that \(k\) can be written in the form \(k = 2c\) for some \(c \in \mathds{Z}\). We see that 
+
+    \begin{align*}
+        sin{\frac{\pi + {2\pi}k}{2m}} &= sin{\frac{\pi + {2\pi}(2c)}{2m}} \\ 
+                                      &= sin{\frac{\pi + {4\pi}c}{2m}} \\
+                                      &= sin{\frac{\pi + 2(2{\pi}c)}{2m}} \\ 
+                                      &= sin\left({\pi}\left({\frac{1 + 2(2c)}{2m}}\right)\right) \\ 
+    \end{align*} 
+
+    Since \(1 + 2(2c)\) and \(2m\) are integers, \(\frac{1 + 2(2c)}{2m} \in \mathds{Q}\), and \(\frac{1 + 2(2c)}{2m}\) is not an integer since an odd number is divided by an even number. However, \(sin\theta = 0\) in the argant plane when \(\theta = F\pi\) where \(F \in \mathds{Z}\). This is a a contradiction. 
+
+    \begin{case}
+        When \(k\) is odd. 
+    \end{case} 
+
+    Suppose that \(k\) is an odd integer. It follows that \(k\) can be written in the form \(k = 2d + 1\) for some \(d \in \mathds{Z}\). We see that 
+
+    \begin{align*}
+        sin{\frac{\pi + {2\pi}k}{2m}} &= sin{\frac{\pi + {2\pi}(2d + 1)}{2m}} \\ 
+                                      &= sin{\frac{\pi + {4\pi}d + 2\pi}{2m}} \\
+                                      &= sin{\frac{\pi + 2(2{\pi}d + \pi)}{2m}} \\ 
+                                      &= sin\left({\pi}\left({\frac{1 + 2(2d + 1)}{2m}}\right)\right) \\ 
+    \end{align*} 
+
+     Since \(1 + 2(2d + 1)\) and \(2m\) are integers, \(\frac{1 + 2(2d + 1)}{2m} \in \mathds{Q}\), and \(\frac{1 + 2(2d + 1)}{2m}\) is not an integer since an odd number is divided by an even number. However, \(sin\theta = 0\) in the argant plane when \(\theta = G\pi\) where \(G \in \mathds{Z}\). This is a a contradiction. 
+\end{proof} 
+
+\section{Conclusion} 
+
+This conjecture is not true in every case because it is not true when \(n \in \mathds{N}\), where \(n\) is an even natural natural, and \(n \geq 2\).  Although this conjecture is disappointingly not unique, I am glad I got to play with it, and I consider this to be a good experience for me. I am glad I attempted to explore this idea in this paper because writing this paper and exploring this idea allowed me to play around with an idea that I deeply care about, and an idea that I was excited about. Throughout my research for this paper, I also got to play with another idea that I deeply care about which was once a profound mystery to me, the idea behind even \(n\)th roots of number, in particular, negative numbers. The research I did while exploring that idea allowed me to see that in general it is true that even \(n\)th roots of negative number will always be non-real complex numbers. 
+
+\newpage
+
+\bibliography{references[1]} 
+\bibliographystyle{chicago} 
+
+\section*{References to Figures} 
+
+\begin{itemize}
+    \item \cref{fig:complex-num-point} reproduced with permission from \cite{highermath2024} 
+    \item \cref{fig:ang-rot} reproduced with permission from \cite{byju's2024} 
+    \item \cref{fig:comp-prod} reproduced with permission from \cite{byju's2024prod}
+\end{itemize} 
+
+\end{document}
